@@ -46,6 +46,10 @@ atom-text-editor, :host {
     color: @syntax-cursor-color;
   }
 
+  .cursor-line {
+    background-color: @light-black;
+  }
+
   .selection .region {
     background-color: @syntax-selection-color;
   }
@@ -178,6 +182,10 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.section.embedded {
     color: darken(@red, 10%);
+  }
+
+  &.tag {
+    color: @blue;
   }
 
 }
