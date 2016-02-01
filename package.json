@@ -1,0 +1,15 @@
+{
+  "name": "classic-bright-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "Classic color syntax: Bright",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/laminko/classic-bright-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
