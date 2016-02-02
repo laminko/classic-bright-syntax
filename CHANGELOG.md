@@ -2,6 +2,7 @@
 * Updated changelog.md
 * updated: php, css, scss, less syntax highlighting
 * minor enhancements
+* added more screenshots.
 
 ### 1.6.1
 * No changes.
