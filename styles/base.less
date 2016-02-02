@@ -89,6 +89,10 @@ atom-text-editor .search-results .marker.current-result .region,
             text-decoration: none;
         }
 
+        &.string {
+            text-decoration: none;
+        }
+
         &.annotation {
             color: @yellow;
         }
@@ -124,11 +128,19 @@ atom-text-editor .search-results .marker.current-result .region,
     &.interpolation {
         color: darken(@red, 10%);
     }
+    &.parameter,
     &.parameter.function {
         color: @cyan;
     }
     &.other {
-        color: @purple;
+        color: @pink;
+
+        &.php {
+            color: @syntax-text-color;
+        }
+        &.module {
+            color: @orange;
+        }
     }
 }
 .invalid.illegal {
@@ -187,6 +199,11 @@ atom-text-editor .search-results .marker.current-result .region,
     &.type {
         color: @orange;
         text-decoration: underline;
+
+        &.property-name {
+            color: @blue;
+            text-decoration: none;
+        }
     }
     &.function {
         color: @blue;
@@ -219,8 +236,9 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.other.attribute-name {
         color: @orange;
+
         &.id {
-            color: @blue;
+            color: @pink;
         }
     }
 }
@@ -229,7 +247,8 @@ atom-text-editor .search-results .marker.current-result .region,
         color: @syntax-text-color;
     }
     &.method-call > .method,
-    &.method-call > .punctuation {
+    &.method-call > .punctuation,
+    &.function-call.php {
         color: @light-orange;
     }
     &.link {
