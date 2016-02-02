@@ -74,6 +74,34 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .storage {
     color: @blue;
+
+    &.todo {
+        color: @yellow;
+    }
+
+    &.type {
+        color: @orange;
+        text-decoration: underline;
+
+        &.function,
+        &.class {
+            color: @blue;
+            text-decoration: none;
+        }
+
+        &.annotation {
+            color: @yellow;
+        }
+    }
+
+    &.modifier {
+        color: @blue;
+
+        &.import,
+        &.package {
+            color: @orange;
+        }
+    }
 }
 .constant {
     color: @yellow;
@@ -92,11 +120,15 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .variable {
     color: @blue;
+
     &.interpolation {
         color: darken(@red, 10%);
     }
     &.parameter.function {
         color: @cyan;
+    }
+    &.other {
+        color: @purple;
     }
 }
 .invalid.illegal {
@@ -152,8 +184,13 @@ atom-text-editor .search-results .marker.current-result .region,
     &.class {
         color: @yellow;
     }
+    &.type {
+        color: @orange;
+        text-decoration: underline;
+    }
     &.function {
-        color: @purple;
+        color: @blue;
+
         &.any-method {
             color: @blue;
         }
@@ -165,7 +202,6 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.name.type {
         color: @yellow;
-        text-decoration: underline;
     }
     &.other.inherited-class {
         color: @purple;
@@ -190,6 +226,10 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .meta {
     &.class {
+        color: @syntax-text-color;
+    }
+    &.method-call > .method,
+    &.method-call > .punctuation {
         color: @light-orange;
     }
     &.link {
