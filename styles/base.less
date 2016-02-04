@@ -76,12 +76,11 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @blue;
 
     &.todo {
-        color: @yellow;
+        color: @blue;
     }
 
     &.type {
-        color: @orange;
-        text-decoration: underline;
+        color: @blue;
 
         &.function,
         &.class {
@@ -135,25 +134,20 @@ atom-text-editor .search-results .marker.current-result .region,
     &.other {
         color: @pink;
 
-        &.php {
-            color: @syntax-text-color;
-        }
         &.module {
             color: @orange;
         }
     }
 }
 .invalid.illegal {
-    background-color: @syntax-background-color;
     color: @red;
+    border-bottom: 1px dotted @red;
 }
 .string {
     color: @red;
+
     &.regexp {
         color: @red;
-        .source.ruby.embedded {
-            color: @orange;
-        }
     }
     &.other.link {
         color: @blue;
@@ -207,10 +201,6 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.function {
         color: @blue;
-
-        &.any-method {
-            color: @blue;
-        }
     }
 }
 .entity {
@@ -224,8 +214,16 @@ atom-text-editor .search-results .marker.current-result .region,
     &.name.type {
         color: @yellow;
     }
-    &.other.inherited-class {
-        color: @purple;
+    &.other {
+        &.inherited-class {
+            color: @purple;
+        }
+        &.attribute-name {
+            color: @orange;
+        }
+        &.id {
+            color: @cyan;
+        }
     }
     &.name.class,
     &.name.type.class {
@@ -238,21 +236,13 @@ atom-text-editor .search-results .marker.current-result .region,
         color: @blue;
         text-decoration: none;
     }
-    &.other.attribute-name {
-        color: @orange;
-
-        &.id {
-            color: @pink;
-        }
-    }
 }
 .meta {
     &.class {
         color: @syntax-text-color;
     }
     &.method-call > .method,
-    &.method-call > .punctuation,
-    &.function-call.php {
+    &.method-call > .punctuation {
         color: @light-orange;
     }
     &.link {
@@ -312,4 +302,11 @@ atom-text-editor .search-results .marker.current-result .region,
 atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
     padding-left: 1px;
+}
+
+/** REF: https://github.com/Urastor/dark-uri-syntax (Thank you!) **/
+atom-text-editor::shadow .highlight.bracket-matcher .region {
+    border-top: 2px solid @orange;
+    border-bottom: 2px solid @orange;
+    z-index: 1;
 }

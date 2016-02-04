@@ -2,6 +2,13 @@
 
 ## Current version
 
+### 1.6.4
+
+*   added language specific styles
+*   fixed colors for java, cpp and php
+*   added bracket highlighting (REF: [Urastor/dark-uri-synta](https://github.com/Urastor/dark-uri-syntax))
+*   updated screenshots for java and php
+
 ### 1.6.3
 
 *   changed python decorator color
