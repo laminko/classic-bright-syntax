@@ -1,10 +1,28 @@
 .php {
-    &.meta {
-        &.function-call {
-            color: @light-orange;
+    &.punctuation {
+        &.definition {
+            &.variable {
+                color: @syntax-text-color;
+            }
+            &.array {
+                &.begin,
+                &.end {
+                    color: @syntax-text-color;
+                }
+            }
         }
     }
-
+    &.meta {
+        &.function-call {
+            color: @orange;
+        }
+    }
+    &.support {
+        &.function {
+            color: @orange;
+            font-weight: normal;
+        }
+    }
     &.variable {
         &.other {
             color: @syntax-text-color;

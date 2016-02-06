@@ -4,6 +4,12 @@ Classic color syntax (Bright). Nice match with `Atom Dark`.
 
 ## Screenshots
 
+### Quick view
+
+![python](screenshots/atom-cbs-dummy-python.png)
+
+### More
+
 Please check [here](screenshots) Or:
 
 *   [bash](screenshots/atom-cbs-dummy-bash.png),

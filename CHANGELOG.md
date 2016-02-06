@@ -2,6 +2,13 @@
 
 ## Current version
 
+### 1.7.0
+
+*   better syntax highlighting (and more readable)
+*   added screenshots: c, less
+*   updated all screenshots except SQL
+*   Special thanks to [Anarkhi](https://github.com/anarkhi) for feedback
+
 ### 1.6.4
 
 *   added language specific styles

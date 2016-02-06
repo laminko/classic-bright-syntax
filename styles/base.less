@@ -54,88 +54,87 @@ atom-text-editor .search-results .marker.current-result .region,
     border: 1px solid @syntax-result-marker-color-selected;
 }
 .comment {
-    color: @green;
+    color: @dark-green;
 }
 .keyword {
-    color: @blue;
+    color: @blue-cyan-light;
+    font-weight: bold;
 
-    &.control {
-        color: @blue;
-    }
     &.operator {
-        color: @orange;
+        color: orange;
+        font-weight: normal;
+
+        &.arithmetic {
+        }
     }
-    &.other.special-method {
-        color: @purple;
-    }
-    &.other.unit {
-        color: @orange;
+    &.other {
+        &.unit {
+            color: @orange;
+            font-weight: normal;
+        }
     }
 }
 .storage {
-    color: @blue;
-
-    &.todo {
-        color: @blue;
-    }
-
-    &.type {
-        color: @blue;
-
-        &.function,
-        &.class {
-            color: @blue;
-            text-decoration: none;
-        }
-
-        &.string {
-            text-decoration: none;
-        }
-
-        &.annotation {
-            color: @yellow;
-        }
-    }
+    color: @blue-cyan-light;
+    font-weight: bold;
 
     &.modifier {
-        color: @blue;
-
-        &.import,
+        &.import {
+            color: @syntax-text-color;
+            font-weight: normal;
+        }
         &.package {
-            color: @orange;
+            color: @yellow;
+            font-weight: normal;
+        }
+    }
+    &.type {
+        &.annotation {
+            color: @green;
+        }
+        &.primitive {
+
         }
     }
 }
 .constant {
     color: @yellow;
-    &.character.escape {
-        color: @pink;
+    font-weight: normal;
+
+    &.character {
+        &.escape {
+            color: @magenta;
+        }
     }
     &.numeric {
         color: @orange;
     }
-    &.other.color {
+    &.variable {
         color: @yellow;
-    }
-    &.other.symbol {
-        color: @orange;
     }
 }
 .variable {
-    color: @blue;
+    font-weight: bold;
+    color: @blue-cyan-light;
 
     &.interpolation {
         color: darken(@red, 10%);
+        font-weight: normal;
     }
-    &.parameter,
-    &.parameter.function {
-        color: @cyan;
+    &.parameter {
+        color: @dark-cyan;
+        font-weight: normal;
     }
+    &.magic,
     &.other {
-        color: @pink;
+        color: @magenta;
+        font-weight: normal;
 
         &.module {
             color: @orange;
+        }
+        &.object {
+            color: @yellow;
         }
     }
 }
@@ -149,26 +148,26 @@ atom-text-editor .search-results .marker.current-result .region,
     &.regexp {
         color: @red;
     }
-    &.other.link {
-        color: @blue;
-    }
 }
 .punctuation {
     &.definition {
         &.comment {
-            color: @green;
+            color: @dark-green;
         }
         &.string {
             color: @red;
         }
         &.variable,
-        &.parameters,
         &.array {
-            color: @blue;
+            color: @blue-cyan-light;
+        }
+        &.parameters,
+        &.arguments {
+            color: @syntax-text-color;
         }
         &.heading,
         &.identity {
-            color: @blue;
+            color: @blue-cyan-light;
         }
         &.bold {
             color: @orange;
@@ -183,7 +182,8 @@ atom-text-editor .search-results .marker.current-result .region,
         color: darken(@red, 10%);
     }
     &.tag {
-        color: @blue;
+        color: @blue-cyan-light;
+        font-weight: bold;
     }
 }
 .support {
@@ -192,31 +192,53 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.type {
         color: @orange;
-        text-decoration: underline;
 
         &.property-name {
-            color: @blue;
-            text-decoration: none;
+            color: @blue-cyan-light;
+            font-weight: bold;
         }
     }
     &.function {
-        color: @blue;
+        color: orange;
+
+        &.magic {
+            color: @magenta;
+        }
+        &.string {
+            font-weight: normal;
+        }
     }
 }
 .entity {
-    &.name.function {
-        color: @purple;
-
-        &.decorator {
-            color: @yellow;
+    &.name {
+        &.class,
+        &.type.class {
+            color: @yellow
         }
-    }
-    &.name.type {
-        color: @yellow;
+        &.function {
+            color: @magenta;
+
+            &.decorator,
+            &.decorator > .support {
+                color: @green;
+            }
+        }
+        &.section,
+        &.tag {
+            color: @blue-cyan-light;
+            font-weight: bold;
+        }
+        &.type {
+            color: @green;
+
+            &.object {
+                color: @yellow;
+            }
+        }
     }
     &.other {
         &.inherited-class {
-            color: @purple;
+            color: @green;
         }
         &.attribute-name {
             color: @orange;
@@ -225,31 +247,36 @@ atom-text-editor .search-results .marker.current-result .region,
             color: @cyan;
         }
     }
-    &.name.class,
-    &.name.type.class {
-        color: @yellow;
-    }
-    &.name.section {
-        color: @blue;
-    }
-    &.name.tag {
-        color: @blue;
-        text-decoration: none;
-    }
 }
 .meta {
     &.class {
         color: @syntax-text-color;
     }
-    &.method-call > .method,
-    &.method-call > .punctuation {
-        color: @light-orange;
+    &.definition {
+        &.variable {
+            font-weight: normal;
+        }
+    }
+    &.function {
+        &.argument {
+            color: @dark-cyan;
+        }
+        &.argument > .variable {
+            color: @dark-cyan;
+        }
     }
     &.link {
         color: @orange;
     }
+    &.method-call > .method {
+        color: @orange;
+    }
+    &.method-call > .punctuation {
+        color: @syntax-text-color;
+    }
     &.require {
-        color: @blue;
+        color: @blue-cyan-light;
+        font-weight: bold;
     }
     &.selector {
         color: @purple;
@@ -278,7 +305,8 @@ atom-text-editor .search-results .marker.current-result .region,
         font-style: italic;
     }
     &.heading .punctuation.definition.heading {
-        color: @blue;
+        color: @blue-cyan-light;
+        font-weight: bold;
     }
     &.inserted {
         color: @green;
