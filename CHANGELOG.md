@@ -2,6 +2,14 @@
 
 ## Current version
 
+### 1.8.1
+
+*   fixed README: link of quick view image
+
+### 1.8.0
+
+*   sorry, during publishing connection timed out.
+
 ### 1.7.0
 
 *   better syntax highlighting (and more readable)

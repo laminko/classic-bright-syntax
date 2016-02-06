@@ -6,7 +6,7 @@ Classic color syntax (Bright). Nice match with `Atom Dark`.
 
 ### Quick view
 
-![python](screenshots/atom-cbs-dummy-python.png)
+![python](https://github.com/laminko/classic-bright-syntax/blob/master/screenshots/atom-cbs-dummy-python.png?raw=true)
 
 ### More
 
