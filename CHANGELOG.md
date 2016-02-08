@@ -2,6 +2,11 @@
 
 ## Current version
 
+### 1.8.2
+
+*   fixed: js syntax highlighting
+*   updated javascript screenshot
+
 ### 1.8.1
 
 *   fixed README: link of quick view image
