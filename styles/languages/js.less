@@ -1,7 +1,8 @@
 .js {
     &.variable {
         &.other {
-            &.object {
+            &.object,
+            &.property {
                 color: @syntax-text-color;
             }
         }
@@ -9,6 +10,13 @@
     &.support {
         &.class {
             color: @syntax-text-color;
+        }
+    }
+    &.entity {
+        &.name {
+            &.function {
+                color: @orange;
+            }
         }
     }
 }
