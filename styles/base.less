@@ -58,7 +58,7 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .keyword {
     color: @blue-cyan-light;
-    font-weight: bold;
+    // font-weight: bold;
 
     &.operator {
         color: orange;
@@ -76,7 +76,7 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .storage {
     color: @blue-cyan-light;
-    font-weight: bold;
+    // font-weight: bold;
 
     &.modifier {
         &.import {
@@ -114,8 +114,8 @@ atom-text-editor .search-results .marker.current-result .region,
     }
 }
 .variable {
-    font-weight: bold;
     color: @blue-cyan-light;
+    // font-weight: bold;
 
     &.interpolation {
         color: darken(@red, 10%);
@@ -143,14 +143,14 @@ atom-text-editor .search-results .marker.current-result .region,
     }
 }
 .invalid.illegal {
-    color: @red;
-    border-bottom: 1px dotted @red;
+    color: @light-red;
+    border-bottom: 1px dotted @light-red;
 }
 .string {
-    color: @red;
+    color: @light-red;
 
     &.regexp {
-        color: @red;
+        color: @light-red;
     }
 }
 .punctuation {
@@ -159,7 +159,7 @@ atom-text-editor .search-results .marker.current-result .region,
             color: @dark-green;
         }
         &.string {
-            color: @red;
+            color: @light-red;
         }
         &.variable,
         &.array {
@@ -175,7 +175,7 @@ atom-text-editor .search-results .marker.current-result .region,
         }
         &.bold {
             color: @orange;
-            font-weight: bold;
+            // font-weight: bold;
         }
         &.italic {
             color: @purple;
@@ -187,7 +187,7 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.tag {
         color: @blue-cyan-light;
-        font-weight: bold;
+        // font-weight: bold;
     }
 }
 .support {
@@ -199,7 +199,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
         &.property-name {
             color: @blue-cyan-light;
-            font-weight: bold;
+            // font-weight: bold;
         }
     }
     &.function {
@@ -230,7 +230,7 @@ atom-text-editor .search-results .marker.current-result .region,
         &.section,
         &.tag {
             color: @blue-cyan-light;
-            font-weight: bold;
+            // font-weight: bold;
         }
         &.type {
             color: @green;
@@ -280,7 +280,7 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.require {
         color: @blue-cyan-light;
-        font-weight: bold;
+        // font-weight: bold;
     }
     &.selector {
         color: @purple;
@@ -296,13 +296,13 @@ atom-text-editor .search-results .marker.current-result .region,
 .markup {
     &.bold {
         color: @orange;
-        font-weight: bold;
+        // font-weight: bold;
     }
     &.changed {
         color: @purple;
     }
     &.deleted {
-        color: @red;
+        color: @light-red;
     }
     &.italic {
         color: @purple;
@@ -310,13 +310,13 @@ atom-text-editor .search-results .marker.current-result .region,
     }
     &.heading .punctuation.definition.heading {
         color: @blue-cyan-light;
-        font-weight: bold;
+        // font-weight: bold;
     }
     &.inserted {
         color: @green;
     }
     &.list {
-        color: @red;
+        color: @light-red;
     }
     &.quote {
         color: @orange;
