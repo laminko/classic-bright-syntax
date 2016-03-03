@@ -2,6 +2,19 @@
 
 ## Current version
 
+### 1.8.5
+
+*   changed color of `import` modules, packages.
+*   updated changelog.
+
+### 1.8.4
+
+*   removed keyword bolding.
+
+### 1.8.3
+
+*   updated JS color highlighting.
+
 ### 1.8.2
 
 *   fixed: js syntax highlighting
