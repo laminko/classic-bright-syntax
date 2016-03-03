@@ -79,18 +79,20 @@ atom-text-editor .search-results .marker.current-result .region,
     // font-weight: bold;
 
     &.modifier {
+        color: @syntax-text-color;
+
         &.import {
-            color: @syntax-text-color;
-            font-weight: normal;
+            // color: @syntax-text-color;
+            // font-weight: normal;
         }
         &.package {
-            color: @yellow;
-            font-weight: normal;
+            // color: @yellow;
+            // font-weight: normal;
         }
     }
     &.type {
         &.annotation {
-            color: @green;
+            color: @cyan;
         }
         &.primitive {
 
@@ -99,7 +101,7 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 .constant {
     color: @yellow;
-    font-weight: normal;
+    // font-weight: normal;
 
     &.character {
         &.escape {
@@ -273,7 +275,7 @@ atom-text-editor .search-results .marker.current-result .region,
         color: @orange;
     }
     &.method-call > .method {
-        color: @orange;
+        // color: @orange;
     }
     &.method-call > .punctuation {
         color: @syntax-text-color;
