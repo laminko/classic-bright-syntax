@@ -35,19 +35,84 @@
 // @light-orange:    mix( @syntax-mix-base, #E5C17C, @syntax-mix-color);
 // @bright-orange:   mix( @syntax-mix-base, #FF8000, @syntax-mix-color);
 
-atom-text-editor::shadow {
-  .source.js.jsx {
-    .jsx {
-      .entity {
+.source.js.jsx {
+
+  .variable {
+    &.other {
+      &.readwrite {
+        color: @orange;
+      }
+    }
+  }
+
+  .meta {
+    .static {
+      .variable {
         &.other {
-          &.attribute-name {
-             font-style: italic // color: @cyan;
+          color: @syntax-text-color;
+        }
+      }
+    }
+
+    .function {
+      .entity {
+        &.name {
+          &.function {
+            color: @syntax-text-color;
           }
         }
       }
-      .constant.character.entity {
-        font-style: italic
+    }
+
+    .support {
+      &.object {
+        color: @yellow;
       }
+      &.function {
+        color: @orange;
+      }
+    }
+
+    .variable {
+      &.other {
+        &.readwrite {
+          color: @syntax-text-color;
+        }
+
+        &.class {
+          color: @orange;
+        }
+      }
+    }
+
+    .other {
+      .string {
+        &.unquoted {
+          color: @syntax-text-color;
+        }
+      }
+    }
+  }
+
+  .property {
+    .variable {
+      &.other {
+        &.class {
+          color: @orange;
+        }
+      }
+    }
+  }
+  .jsx {
+    .entity {
+      &.other {
+        &.attribute-name {
+           font-style: italic // color: @cyan;
+        }
+      }
+    }
+    .constant.character.entity {
+      font-style: italic
     }
   }
 }
